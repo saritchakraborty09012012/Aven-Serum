@@ -1,0 +1,158 @@
+{
+  "sheets": [
+    {
+      "file": "sheet_00.webp",
+      "start": 0,
+      "count": 64,
+      "cols": 8,
+      "rows": 8,
+      "width": 160,
+      "height": 356
+    },
+    {
+      "file": "sheet_01.webp",
+      "start": 64,
+      "count": 64,
+      "cols": 8,
+      "rows": 8,
+      "width": 160,
+      "height": 356
+    },
+    {
+      "file": "sheet_02.webp",
+      "start": 128,
+      "count": 64,
+      "cols": 8,
+      "rows": 8,
+      "width": 160,
+      "height": 356
+    },
+    {
+      "file": "sheet_03.webp",
+      "start": 192,
+      "count": 64,
+      "cols": 8,
+      "rows": 8,
+      "width": 160,
+      "height": 356
+    },
+    {
+      "file": "sheet_04.webp",
+      "start": 256,
+      "count": 64,
+      "cols": 8,
+      "rows": 8,
+      "width": 160,
+      "height": 356
+    },
+    {
+      "file": "sheet_05.webp",
+      "start": 320,
+      "count": 64,
+      "cols": 8,
+      "rows": 8,
+      "width": 160,
+      "height": 356
+    },
+    {
+      "file": "sheet_06.webp",
+      "start": 384,
+      "count": 64,
+      "cols": 8,
+      "rows": 8,
+      "width": 160,
+      "height": 356
+    },
+    {
+      "file": "sheet_07.webp",
+      "start": 448,
+      "count": 64,
+      "cols": 8,
+      "rows": 8,
+      "width": 160,
+      "height": 356
+    },
+    {
+      "file": "sheet_08.webp",
+      "start": 512,
+      "count": 64,
+      "cols": 8,
+      "rows": 8,
+      "width": 160,
+      "height": 356
+    },
+    {
+      "file": "sheet_09.webp",
+      "start": 576,
+      "count": 64,
+      "cols": 8,
+      "rows": 8,
+      "width": 160,
+      "height": 356
+    },
+    {
+      "file": "sheet_10.webp",
+      "start": 640,
+      "count": 64,
+      "cols": 8,
+      "rows": 8,
+      "width": 160,
+      "height": 356
+    },
+    {
+      "file": "sheet_11.webp",
+      "start": 704,
+      "count": 64,
+      "cols": 8,
+      "rows": 8,
+      "width": 160,
+      "height": 356
+    },
+    {
+      "file": "sheet_12.webp",
+      "start": 768,
+      "count": 64,
+      "cols": 8,
+      "rows": 8,
+      "width": 160,
+      "height": 356
+    },
+    {
+      "file": "sheet_13.webp",
+      "start": 832,
+      "count": 64,
+      "cols": 8,
+      "rows": 8,
+      "width": 160,
+      "height": 356
+    },
+    {
+      "file": "sheet_14.webp",
+      "start": 896,
+      "count": 64,
+      "cols": 8,
+      "rows": 8,
+      "width": 160,
+      "height": 356
+    },
+    {
+      "file": "sheet_15.webp",
+      "start": 960,
+      "count": 64,
+      "cols": 8,
+      "rows": 8,
+      "width": 160,
+      "height": 356
+    },
+    {
+      "file": "sheet_16.webp",
+      "start": 1024,
+      "count": 22,
+      "cols": 8,
+      "rows": 8,
+      "width": 160,
+      "height": 356
+    }
+  ],
+  "total": 1046
+}

@@ -1,0 +1,32 @@
+{
+  "name": "ambar-serum",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "frames:previews": "node scripts/make-previews.mjs",
+    "assets:download": "node scripts/fetch-assets.mjs",
+    "assets:download:portrait": "node scripts/fetch-portrait.mjs",
+    "assets:previews": "node scripts/make-previews.mjs",
+    "assets:previews:portrait": "node scripts/make-portrait-previews.mjs",
+    "assets:bottle": "blender -b -P scripts/blender/build_bottle.py"
+  },
+  "dependencies": {
+    "lenis": "^1.1.18",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "three": "^0.171.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "playwright-core": "^1.49.1",
+    "postcss": "^8.4.49",
+    "sharp": "^0.33.5",
+    "tailwindcss": "^3.4.17",
+    "vite": "^6.0.7"
+  }
+}
