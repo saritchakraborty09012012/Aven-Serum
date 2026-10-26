@@ -376,10 +376,38 @@ export default function ScrollFilm() {
       ctx.drawImage(image, sx, sy, sw, sh, x, y, width, height);
     }
 
+    // On phones the whole frame stays visible, like the laptop cut shows the
+    // whole scene: fit it instead of cropping into it (cover, bottom-anchored,
+    // was zooming the bottle and cutting the top of the shot away). Whatever
+    // margin is left is filled from the frame's own outermost row/column, so
+    // the picture still reaches every edge — no letterbox, no blur, no canvas
+    // downscale. Desktop keeps drawCover: the laptop framing does not change.
+    function drawFit(image, sx, sy, sw, sh) {
+      const scale = Math.min(canvas.width / sw, canvas.height / sh);
+      const width = sw * scale;
+      const height = sh * scale;
+      const x = (canvas.width - width) / 2;
+      const y = (canvas.height - height) / 2;
+      ctx.drawImage(image, sx, sy, sw, sh, x, y, width, height);
+      if (x > 0.5) {
+        ctx.drawImage(image, sx, sy, 1, sh, 0, 0, x, canvas.height);
+        ctx.drawImage(image, sx + sw - 1, sy, 1, sh, x + width, 0, x, canvas.height);
+      }
+      if (y > 0.5) {
+        ctx.drawImage(image, sx, sy, sw, 1, 0, 0, canvas.width, y);
+        ctx.drawImage(image, sx, sy + sh - 1, sw, 1, 0, y + height, canvas.width, y);
+      }
+    }
+
+    function placeFrame(image, sx, sy, sw, sh) {
+      if (portrait) drawFit(image, sx, sy, sw, sh);
+      else drawCover(image, sx, sy, sw, sh);
+    }
+
     function drawFull(index) {
       const image = full.get(index);
       if (!image || !image.naturalWidth) return false;
-      drawCover(image, 0, 0, image.naturalWidth, image.naturalHeight);
+      placeFrame(image, 0, 0, image.naturalWidth, image.naturalHeight);
       return true;
     }
 
@@ -392,7 +420,7 @@ export default function ScrollFilm() {
       if (slot < 0 || slot >= meta.count) return false;
       const col = slot % meta.cols;
       const row = Math.floor(slot / meta.cols);
-      drawCover(image, col * meta.width, row * meta.height, meta.width, meta.height);
+      placeFrame(image, col * meta.width, row * meta.height, meta.width, meta.height);
       return true;
     }
 
